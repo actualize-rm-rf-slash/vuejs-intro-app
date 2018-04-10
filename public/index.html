@@ -27,6 +27,13 @@
     <h2>{{ fortunes[1] }}</h2>
     <h2>{{ fortunes[2] }}</h2>
 
+    <h2>Tasks</h2>
+    <div v-for="task in tasks">
+      <p>{{ task.text }}</p>
+      <p>Completed? {{ task.completed }}</p>
+    </div>
+    <input type="text" v-model="tasks[2].text">
+
     <h2>Reviews</h2>
     <ul>
       <li v-for="review in reviews">

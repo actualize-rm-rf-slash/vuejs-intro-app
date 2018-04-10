@@ -1,11 +1,15 @@
 /* global Vue, VueRouter, axios */
-
 var HomePage = {
   template: "#home-page",
   data: function() {
     return {
       message: "Welcome to Vue.js!!!!",
       fortunes: ["good", "bad", "okay"],
+      tasks: [
+        { id: 1, text: "Take out the garbage", completed: false },
+        { id: 2, text: "Make the bed", completed: false },
+        { id: 3, text: "Mow the lawn", completed: false }
+      ],
       reviews: [
         {
           text: "Vue.js is the best thing since sliced bread!",
