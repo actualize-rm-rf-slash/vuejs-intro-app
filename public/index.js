@@ -34,8 +34,10 @@ var HomePage = {
   created: function() {},
   methods: {
     addTask: function() {
-      this.tasks.push(this.newTask);
-      this.newTask = { id: 4, text: "", completed: false };
+      if (this.newTask.text) {
+        this.tasks.push(this.newTask);
+        this.newTask = { id: 4, text: "", completed: false };
+      }
     },
     addReview: function() {
       this.reviews.push(this.newReview);
