@@ -10,6 +10,7 @@ var HomePage = {
         { id: 2, text: "Make the bed", completed: false },
         { id: 3, text: "Mow the lawn", completed: false }
       ],
+      newReview: { text: "", rating: "", reviewer: "" },
       reviews: [
         {
           text: "Vue.js is the best thing since sliced bread!",
@@ -30,7 +31,11 @@ var HomePage = {
     };
   },
   created: function() {},
-  methods: {},
+  methods: {
+    addReview: function() {
+      this.reviews.push(this.newReview);
+    }
+  },
   computed: {}
 };
 

@@ -20,6 +20,21 @@
 <template id="home-page">
   <div class="vue-component">
 
+    <h2>Add a new review</h2>
+    <div>
+      Review text: <input type="text" v-model="newReview.text">
+      Review rating: <input type="text" v-model="newReview.rating">
+      Review name: <input type="text" v-model="newReview.reviewer">
+      <button v-on:click="addReview()">Submit</button>
+    </div>
+
+    <h2>Reviews</h2>
+    <ul>
+      <li v-for="review in reviews">
+        {{ review.rating }} STARS - {{ review.reviewer }}: {{ review.text }}
+      </li>
+    </ul>
+
     <h1>{{ message }}</h1>
     <input type="text" v-model="message">
 
@@ -33,12 +48,5 @@
       <p>Completed? {{ task.completed }}</p>
     </div>
     <input type="text" v-model="tasks[2].text">
-
-    <h2>Reviews</h2>
-    <ul>
-      <li v-for="review in reviews">
-        {{ review.rating }} STARS - {{ review.reviewer }}: {{ review.text }}
-      </li>
-    </ul>
   </div>
 </template>
