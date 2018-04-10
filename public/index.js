@@ -46,6 +46,9 @@ var HomePage = {
     },
     addReview: function() {
       this.reviews.push(this.newReview);
+    },
+    isPositiveReview: function(inputReview) {
+      return inputReview.rating > 3;
     }
   },
   computed: {}
