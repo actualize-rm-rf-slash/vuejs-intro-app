@@ -42,6 +42,13 @@
     <h2>{{ fortunes[1] }}</h2>
     <h2>{{ fortunes[2] }}</h2>
 
+
+    <h2>Add a new task</h2>
+    <div>
+      Task text: <input type="text" v-model="newTask.text">
+      <button v-on:click="addTask()">Submit</button>
+    </div>
+
     <h2>Tasks</h2>
     <div v-for="task in tasks">
       <p>{{ task.text }}</p>

@@ -10,6 +10,7 @@ var HomePage = {
         { id: 2, text: "Make the bed", completed: false },
         { id: 3, text: "Mow the lawn", completed: false }
       ],
+      newTask: { id: 4, text: "", completed: false },
       newReview: { text: "", rating: "", reviewer: "" },
       reviews: [
         {
@@ -32,6 +33,10 @@ var HomePage = {
   },
   created: function() {},
   methods: {
+    addTask: function() {
+      this.tasks.push(this.newTask);
+      this.newTask = { id: 4, text: "", completed: false };
+    },
     addReview: function() {
       this.reviews.push(this.newReview);
     }
