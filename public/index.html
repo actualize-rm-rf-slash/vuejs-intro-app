@@ -53,7 +53,8 @@
     <div v-for="task in tasks">
       <p>{{ task.text }}</p>
       <p>Completed? {{ task.completed }}</p>
+      <button v-on:click="completeTask(task)">Complete task</button>
     </div>
-    <input type="text" v-model="tasks[2].text">
+    <!-- <input type="text" v-model="tasks[2].text"> -->
   </div>
 </template>

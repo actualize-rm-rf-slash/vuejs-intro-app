@@ -39,6 +39,11 @@ var HomePage = {
         this.newTask = { id: 4, text: "", completed: false };
       }
     },
+    completeTask: function(inputTask) {
+      console.log(inputTask);
+      var index = this.tasks.indexOf(inputTask);
+      this.tasks.splice(index, 1);
+    },
     addReview: function() {
       this.reviews.push(this.newReview);
     }
